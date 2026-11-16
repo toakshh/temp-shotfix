@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--
+THESIS: A video goes from blackout to air. The page is a theatre cyclorama whose light rises from night through cobalt and rose into white day as the visitor scrolls, the way a cut rises from major rework to ready. It refuses the dark SaaS hero with a glowing screenshot and a three-card feature row.
+OWN-WORLD: Cyc black, cobalt horizon, rose gather, dawn rose, day wash, white day. Road-case stencil caps for cues, Geist for reading, Geist Mono for timecodes. Lighting-desk faders, cue sheets, stage monitors on a horizon line.
+STORY: See the real app check a real (sample) ad, believe every flaw is proven on the frame, request access.
+FIRST VIEWPORT: Blackout stage. Stencil headline left, two lines; the recorded app stands on the cobalt horizon at right; Request access is the first button under the subline.
+FORM: Fused challenger "cyclorama dawn" (seed aee0d5c4), chosen by the user; staging: one stage that becomes the screening.
+-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ShotFix | AI video QC that scores your video before it airs</title>
+<meta name="description" content="ShotFix is AI video QC. Upload a video with its brief and get a score out of 100, a publish verdict, and every problem pinned to the frame." />
+<link rel="canonical" href="%SITE%/" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="application-name" content="ShotFix" />
+<meta name="author" content="Metabrix" />
+<meta name="theme-color" content="#050507" />
+<meta name="color-scheme" content="dark light" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ShotFix" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="%SITE%/" />
+<meta property="og:title" content="ShotFix | Know it's ready before it airs" />
+<meta property="og:description" content="AI video QC: a score out of 100, a publish verdict, and every problem pinned to the frame, before you publish." />
+<meta property="og:image" content="%SITE%/media/og.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="ShotFix: Know it's ready before it airs, with the ShotFix app on a stage monitor" />
+<meta property="og:video" content="%SITE%/media/film.mp4" />
+<meta property="og:video:type" content="video/mp4" />
+<meta property="og:video:width" content="1600" />
+<meta property="og:video:height" content="1000" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ShotFix | Know it's ready before it airs" />
+<meta name="twitter:description" content="AI video QC: a score out of 100, a publish verdict, and every problem pinned to the frame." />
+<meta name="twitter:image" content="%SITE%/media/og.jpg" />
+<meta name="twitter:image:alt" content="ShotFix: Know it's ready before it airs, with the ShotFix app on a stage monitor" />
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="icon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="manifest" href="site.webmanifest" />
+<link rel="sitemap" type="application/xml" href="sitemap.xml" />
+<link rel="preload" href="media/hero-loop.jpg" as="image" fetchpriority="high" media="(min-width: 900px) and (min-height: 600px)" />
+<link rel="preload" href="media/film.jpg" as="image" fetchpriority="high" media="(max-width: 899px), (max-height: 599px)" />
+<!-- %FONT_PRELOADS% -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "%SITE%/#org",
+      "name": "Metabrix",
+      "url": "%SITE%/",
+      "logo": { "@type": "ImageObject", "url": "%SITE%/icon-512.png", "width": 512, "height": 512 },
+      "brand": { "@id": "%SITE%/#app" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "%SITE%/#website",
+      "url": "%SITE%/",
+      "name": "ShotFix",
+      "description": "AI video QC that scores a video against its brief before it is published.",
+      "inLanguage": "en",
+      "publisher": { "@id": "%SITE%/#org" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "%SITE%/#webpage",
+      "url": "%SITE%/",
+      "name": "ShotFix | AI video QC that scores your video before it airs",
+      "description": "ShotFix is AI video QC. Upload a video with its brief and get a score out of 100, a publish verdict, and every problem pinned to the frame.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "%SITE%/#website" },
+      "about": { "@id": "%SITE%/#app" },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": "%SITE%/media/og.jpg", "width": 1200, "height": 630 },
+      "video": { "@id": "%SITE%/#film" },
+      "datePublished": "2026-11-12",
+      "dateModified": "%BUILD_DATE%"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "%SITE%/#app",
+      "name": "ShotFix",
+      "url": "%SITE%/",
+      "description": "ShotFix checks a video before it is published. It watches and listens to the video against its brief and returns an overall score out of 100, a publish verdict, six category scores, and findings pinned to time ranges with evidence frames.",
+      "applicationCategory": "MultimediaApplication",
+      "applicationSubCategory": "Video quality control",
+      "operatingSystem": "Web browser",
+      "image": "%SITE%/media/og.jpg",
+      "screenshot": [
+        { "@type": "ImageObject", "url": "%SITE%/media/who-creators.jpg", "caption": "The report's verdict panel with the overall score and six category scores" },
+        { "@type": "ImageObject", "url": "%SITE%/media/who-brand.jpg", "caption": "A critical finding for an unsupported health claim, with its evidence frame" },
+        { "@type": "ImageObject", "url": "%SITE%/media/who-agencies.jpg", "caption": "The share dialog with a read-only link for a client" }
+      ],
+      "featureList": [
+        "Overall score out of 100 and a publish verdict: ready, minor fixes, needs work or major rework",
+        "Six weighted category scores: consistency, visual quality, emotion and engagement, script and content, viral potential, compliance",
+        "Findings with severity, a time range and evidence frames",
+        "Continuity checks against the brief and reference notes",
+        "AI artefact detection: garbled text, warping, morphing",
+        "Claims register and industry rules for regulated categories",
+        "Platform spec checks for shape, resolution and length",
+        "Black frame, freeze and loudness measurement",
+        "Hook, call to action and pacing measurements",
+        "Fast and Detailed analysis modes",
+        "Expiring read-only share links and HTML or JSON export",
+        "Re-analysis with run history"
+      ],
+      "audience": [
+        { "@type": "Audience", "audienceType": "AI video creators" },
+        { "@type": "Audience", "audienceType": "Agencies and studios" },
+        { "@type": "Audience", "audienceType": "Brand and compliance reviewers" }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "%SITE%/#access",
+        "availability": "https://schema.org/LimitedAvailability",
+        "description": "Early access by request. Analyses are paid in credits per started video minute: 1 for Fast, 3 for Detailed."
+      },
+      "publisher": { "@id": "%SITE%/#org" }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "%SITE%/#film",
+      "name": "ShotFix: one check, start to finish",
+      "description": "A screen recording of the ShotFix app checking a sample launch ad: the brief, the live analysis, the verdict, the evidence frames, the fix list and the share link. The ad and report are synthetic samples; the analysis is sped up.",
+      "thumbnailUrl": ["%SITE%/media/film.jpg", "%SITE%/media/og.jpg"],
+      "uploadDate": "2026-11-12T00:00:00+00:00",
+      "duration": "PT1M6S",
+      "contentUrl": "%SITE%/media/film.mp4",
+      "inLanguage": "en",
+      "isFamilyFriendly": true,
+      "publisher": { "@id": "%SITE%/#org" },
+      "hasPart": %CLIPS%
+    },
+    %FAQ%
+  ]
+}
+</script>
+<script type="module" src="/src/main.js"></script>
+</head>
+<body data-ink="light">
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="cyc" aria-hidden="true"></canvas>
+<div class="cyc-fallback" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="wordmark" href="#top" aria-label="ShotFix, back to top"><span class="wordmark__sun" aria-hidden="true"></span>ShotFix</a>
+  <nav aria-label="Primary">
+    <ul class="nav__links">
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#verdict">The report</a></li>
+      <li><a href="#who">Who it's for</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </nav>
+  <a class="nav__signin" href="/app/">Sign in</a>
+  <a class="btn btn--key nav__cta" href="#access">Request access</a>
+</header>
+
+<aside class="desk" id="desk" aria-label="Lighting cues, page sections">
+  <div class="desk__readout" aria-hidden="true">
+    <span class="desk__label">Cue</span>
+    <span class="desk__cue" id="deskCue">LX 000</span>
+    <span class="desk__name" id="deskName">Blackout</span>
+  </div>
+  <ol class="desk__list">
+    <li><a href="#top" data-cue="0"><b>LX 000</b><span>Blackout</span></a></li>
+    <li><a href="#how" data-cue="1"><b>LX 127</b><span>Cobalt rise</span></a></li>
+    <li><a href="#verdict" data-cue="2"><b>LX 263</b><span>Rose gather</span></a></li>
+    <li><a href="#proof" data-cue="3"><b>LX 389</b><span>Dawn bloom</span></a></li>
+    <li><a href="#share" data-cue="4"><b>LX 455</b><span>Day wash</span></a></li>
+    <li><a href="#access" data-cue="5"><b>LX 512</b><span>White day</span></a></li>
+  </ol>
+  <div class="desk__fader" aria-hidden="true"><span id="deskLevel"></span></div>
+</aside>
+
+<main id="main">
+
+  <!-- LX 000: the stage. Blackout, then the recording takes the screen -->
+  <section class="stage" id="top" data-cue="0" data-phase="0.07" data-phase-dark="0.07" data-ink="light" aria-labelledby="hero-title">
+    <script>/* phones and reduced motion get the stacked stage before first paint; main.js keeps it in sync */ if (!matchMedia('(min-width: 900px) and (min-height: 600px) and (prefers-reduced-motion: no-preference)').matches) document.currentScript.parentElement.classList.add('is-static', 'film-on');</script>
+    <div class="stage__pin">
+      <div class="hero">
+        <p class="kicker">AI video QC for creators, studios and brand teams</p>
+        <h1 class="hero__title display" id="hero-title"><span class="line">Know it's ready</span> <span class="line">before it airs.</span></h1>
+        <p class="hero__sub">ShotFix watches and listens to your video against your brief, scores it, and pins every problem to the frame.</p>
+        <div class="hero__actions">
+          <a class="btn btn--key" href="#access">Request access <i data-icon="arrow-right"></i></a>
+          <a class="btn btn--ghost" href="#film" id="watchRun"><i data-icon="play"></i> Watch the run <span class="mono" id="filmLength">1:06</span></a>
+        </div>
+      </div>
+
+      <div class="film-head" id="film">
+        <h2 class="film-head__title">One check, start to finish.</h2>
+        <p class="film-head__sub">Recorded in the ShotFix app on a sample ad. The analysis is sped up.</p>
+      </div>
+
+      <figure class="monitor" id="monitor">
+        <div class="monitor__screen">
+          <video class="monitor__loop" id="heroLoop" src="media/hero-loop.mp4" poster="media/hero-loop.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video>
+          <video class="monitor__film" id="filmVideo" poster="media/film.jpg" muted playsinline preload="none" aria-label="Screen recording: a full ShotFix analysis of a sample launch ad, from brief to share link">
+            <source data-src="media/film.mp4" type="video/mp4" media="(min-width: 900px)" />
+            <source data-src="media/film-720.mp4" type="video/mp4" />
+            <track kind="chapters" srclang="en" label="Chapters" src="media/film-chapters.vtt" default />
+          </video>
+          <button class="monitor__play" id="filmToggle" type="button" aria-label="Play the recording"><i data-icon="play" class="i-play"></i><i data-icon="pause" class="i-pause"></i></button>
+        </div>
+        <figcaption class="monitor__umd"><span class="umd__tally" aria-hidden="true"></span><span>ShotFix app</span><span class="umd__sep" aria-hidden="true"></span><span>Sample ad, sample data</span></figcaption>
+      </figure>
+
+      <nav class="chapters" id="chapters" aria-label="Recording chapters">
+        <ol>
+          <li><button type="button" data-t="0"><span class="mono">0:00</span>Brief</button></li>
+          <li><button type="button" data-t="22.3"><span class="mono">0:22</span>Live run</button></li>
+          <li><button type="button" data-t="31.7"><span class="mono">0:31</span>Verdict</button></li>
+          <li><button type="button" data-t="39.3"><span class="mono">0:39</span>Proof</button></li>
+          <li><button type="button" data-t="53.4"><span class="mono">0:53</span>Fix</button></li>
+          <li><button type="button" data-t="58.0"><span class="mono">0:58</span>Share</button></li>
+        </ol>
+        <div class="chapters__bar" aria-hidden="true"><span id="filmProgress"></span></div>
+      </nav>
+    </div>
+  </section>
+
+  <!-- LX 127: how a check runs -->
+  <section class="how" id="how" data-cue="1" data-phase="0.22" data-phase-dark="0.22" data-ink="light" aria-labelledby="how-title">
+    <h2 class="section-title display" id="how-title">Brief in. Verdict out.</h2>
+    <div class="how__grid">
+      <ol class="how__steps">
+        <li class="step" data-step="0">
+          <h3>Tell it what the video is for.</h3>
+          <p>Title, goal, audience, platforms, brand, the call to action you expect, and reference notes. The notes count as ground truth: if the brief says the can is coral, every shot gets checked for coral.</p>
+        </li>
+        <li class="step" data-step="1">
+          <h3>It watches and listens, all at once.</h3>
+          <p>Speech to text runs beside reviewers for picture, sound, script, AI artefacts, consistency, viral potential and industry rules. Each stage lights up as it finishes.</p>
+          <dl class="modes">
+            <div><dt>Fast</dt><dd>Three quick passes: scores and findings. <span class="mono">1 credit</span> per video minute.</dd></div>
+            <div><dt>Detailed</dt><dd>Every reviewer, plus a fix plan. <span class="mono">3 credits</span> per video minute.</dd></div>
+          </dl>
+        </li>
+        <li class="step" data-step="2">
+          <h3>Every finding points at the moment.</h3>
+          <p>Each problem carries a time range, the frame and the object circled. Open it large, flip to the reference, or play the video from that second.</p>
+        </li>
+      </ol>
+      <div class="how__media">
+        <div class="monitor monitor--small" aria-hidden="true">
+          <div class="monitor__screen">
+            <video class="clip is-on" data-clip="0" data-src="media/step-brief.mp4" poster="media/step-brief.jpg" muted loop playsinline preload="none"></video>
+            <video class="clip" data-clip="1" data-src="media/step-run.mp4" poster="media/step-run.jpg" muted loop playsinline preload="none"></video>
+            <video class="clip" data-clip="2" data-src="media/step-proof.mp4" poster="media/step-proof.jpg" muted loop playsinline preload="none"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LX 263: the lighting desk. Six faders, one verdict, and the room's light follows it -->
+  <section class="verdict" id="verdict" data-cue="2" data-phase="0.42" data-phase-dark="0.42" data-ink="light" aria-labelledby="verdict-title">
+    <div class="console">
+      <div class="console__head">
+        <div>
+          <h2 class="section-title display" id="verdict-title">The verdict, then the reasons.</h2>
+          <p class="console__sub">Six scores, weighted into one. These are the sample ad's. Push a fader and watch the room: at 85 the light goes to day.</p>
+        </div>
+        <div class="master" aria-live="polite">
+          <div class="master__score"><span class="mono" id="overall">58</span><small>/100</small></div>
+          <div class="master__verdict" id="verdictWord">Needs work</div>
+          <div class="master__scale" aria-hidden="true">
+            <span style="--at:50">50</span><span style="--at:70">70</span><span style="--at:85">85</span>
+            <i id="verdictPin"></i>
+          </div>
+        </div>
+      </div>
+      <div class="faders" id="faders">
+        <!-- filled by main.js from the sample report; static fallback below for no-JS -->
+        <noscript><p class="console__sub">Consistency 41, Visual quality 66, Emotion and engagement 74, Script and content 71, Viral potential 52, Compliance 38. Overall 58: needs work.</p></noscript>
+      </div>
+      <div class="console__foot">
+        <p>Under 50 is major rework, 50 to 69 needs work, 70 to 84 minor fixes, 85 and up ready. In the app, an open critical finding holds the verdict at needs work until it is fixed or dismissed.</p>
+        <button class="btn btn--line" type="button" id="resetFaders"><i data-icon="arrow-counter-clockwise"></i> Back to the sample</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LX 389: proof on the frame -->
+  <section class="proof" id="proof" data-cue="3" data-phase="0.62" data-phase-dark="0.46" data-ink="dark" data-ink-dark="light" aria-labelledby="proof-title">
+    <div class="proof__intro">
+      <h2 class="section-title display" id="proof-title">Proof, not opinions.</h2>
+      <p class="lede">Every finding is pinned to a time range in the video, with the frame that shows it. Drag across the sample ad's worst one.</p>
+    </div>
+
+    <figure class="wipe" id="wipe">
+      <div class="wipe__stage">
+        <div class="wipe__layer wipe__layer--issue">
+          <img src="media/ev-issue.jpg" alt="Issue frame at 0:08.0: the can is orange and its logo faces away, circled in red" width="1280" height="720" loading="lazy" />
+          <svg class="marks" viewBox="0 0 1280 720" aria-hidden="true"><ellipse class="mark mark--issue" cx="512" cy="397" rx="257" ry="383" pathLength="1" /></svg>
+          <span class="wipe__tag wipe__tag--issue"><b class="mono">0:08.0</b> Issue</span>
+        </div>
+        <div class="wipe__layer wipe__layer--ref" id="wipeRef">
+          <img src="media/ev-ref.jpg" alt="Reference frame at 0:05.0: the coral can with the sunrise logo to camera, circled in a dashed green line" width="1280" height="720" loading="lazy" />
+          <svg class="marks" viewBox="0 0 1280 720" aria-hidden="true"><ellipse class="mark mark--ref" cx="824" cy="401" rx="117" ry="230" /></svg>
+          <span class="wipe__tag wipe__tag--ref"><b class="mono">0:05.0</b> Reference</span>
+        </div>
+        <div class="wipe__handle" id="wipeHandle" aria-hidden="true"><span></span></div>
+        <input class="wipe__range" id="wipeRange" type="range" min="0" max="100" value="58" aria-label="Compare the reference frame with the issue frame" />
+      </div>
+      <figcaption class="finding-line">
+        <span class="sev sev--critical"><i data-icon="warning-octagon"></i>Critical</span>
+        <span class="finding-line__cat">Consistency</span>
+        <span class="finding-line__title">The can turns from coral to orange in shot 3, and its logo turns away.</span>
+        <span class="finding-line__why">The reference notes fix it as coral pink #FF6F61, logo to camera. Two reviewers agree.</span>
+      </figcaption>
+    </figure>
+
+    <div class="scrub" id="scrub" aria-labelledby="scrub-title">
+      <div class="scrub__pin">
+        <div class="scrub__head">
+          <h3 class="scrub__title" id="scrub-title">The whole cut, on one timeline.</h3>
+          <p class="scrub__tc mono" aria-hidden="true"><span id="scrubTc">00:00:00:00</span></p>
+        </div>
+        <div class="scrub__body">
+          <div class="scrub__frame">
+            <video id="scrubVideo" data-src="media/ad-scrub.mp4" poster="media/ad-poster.jpg" muted playsinline preload="none" aria-label="The sample ad, scrubbed by scrolling"></video>
+            <span class="scrub__flag" id="scrubFlag" hidden></span>
+          </div>
+          <ol class="scrub__log" id="scrubLog" aria-label="Findings in time order"></ol>
+        </div>
+        <div class="timeline" id="timeline" aria-hidden="true">
+          <div class="timeline__strip" id="strip"></div>
+          <div class="timeline__lanes" id="lanes"></div>
+          <div class="timeline__ticks"><span>0:00</span><span>0:06</span><span>0:12</span><span>0:18</span><span>0:24</span></div>
+          <div class="timeline__head" id="playhead"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LX 389 continued: what it catches -->
+  <section class="catches" id="catches" data-cue="3" data-phase="0.74" data-phase-dark="0.48" data-ink="dark" data-ink-dark="light" aria-labelledby="catches-title">
+    <h2 class="section-title display" id="catches-title">What it catches.</h2>
+    <div class="bento">
+      <article class="cell cell--continuity">
+        <div class="cell__media pair">
+          <img src="media/ev-ref.jpg" alt="Reference: coral can" loading="lazy" width="1280" height="720" />
+          <img src="media/ev-issue.jpg" alt="Issue: orange can" loading="lazy" width="1280" height="720" />
+        </div>
+        <h3>Continuity</h3>
+        <p>A face, an outfit, a product's colour or a voice that changes between shots, checked against your reference notes.</p>
+      </article>
+      <article class="cell cell--slop">
+        <div class="cell__media crop"><img src="media/ev-garble.jpg" alt="Close crop of the can label reading DAYBR3AK and SPARKLNIG" loading="lazy" width="640" height="360" /></div>
+        <h3>AI artefacts</h3>
+        <p>Garbled lettering, warping and morphing that give a generated shot away.</p>
+      </article>
+      <article class="cell cell--claims">
+        <h3>Claims and industry rules</h3>
+        <ul class="register">
+          <li><span class="risk risk--high">High</span><span class="mono">0:14.8</span>“Clinically proven focus”</li>
+          <li><span class="risk risk--low">Low</span><span class="mono">0:12.8</span>“Zero sugar”</li>
+        </ul>
+        <p>Health and wellness, finance and crypto, alcohol, kids and family, beauty, electronics and gaming each add their own checks.</p>
+      </article>
+      <article class="cell cell--specs">
+        <h3>Platform fit</h3>
+        <table class="specs">
+          <caption class="sr-only">Sample ad delivered at 16:9</caption>
+          <tbody>
+            <tr><th scope="row">TikTok</th><td>9:16 expected</td><td><span class="pass pass--no"><i data-icon="x-circle"></i>Fail</span></td></tr>
+            <tr><th scope="row">Instagram Reels</th><td>9:16 expected</td><td><span class="pass pass--no"><i data-icon="x-circle"></i>Fail</span></td></tr>
+            <tr><th scope="row">YouTube</th><td>16:9</td><td><span class="pass pass--ok"><i data-icon="check-circle"></i>Pass</span></td></tr>
+          </tbody>
+        </table>
+        <p>Shape, resolution and length for each place you post.</p>
+      </article>
+      <article class="cell cell--signals">
+        <h3>Measured signals</h3>
+        <div class="loud">
+          <div class="loud__meter" aria-hidden="true"><span style="--v:0.78"></span><i style="--t:0.56"></i></div>
+          <p class="loud__read"><b class="mono">&minus;9.2</b> LUFS <span>target &minus;14</span></p>
+        </div>
+        <p>Black frames, freezes and loudness are measured even when the AI reviewers are off.</p>
+      </article>
+      <article class="cell cell--hook">
+        <h3>Hook, call to action, pacing</h3>
+        <dl class="reads">
+          <div><dt>Hook</dt><dd class="mono">48/100</dd></div>
+          <div><dt>Call to action</dt><dd class="mono">0:22.6</dd></div>
+          <div><dt>Average shot</dt><dd class="mono">4.6s</dd></div>
+        </dl>
+        <p>How fast the product lands, when the ask shows up, how long each shot runs.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- LX 455: fix order and the share link -->
+  <section class="share" id="share" data-cue="4" data-phase="0.86" data-phase-dark="0.5" data-ink="dark" data-ink-dark="light" aria-labelledby="share-title">
+    <h2 class="section-title display" id="share-title">Fix in order. Share as is.</h2>
+    <div class="share__grid">
+      <div class="cuesheet">
+        <h3>Fix first <span>the sample ad's order</span></h3>
+        <table>
+          <thead><tr><th scope="col">Cue</th><th scope="col">Time</th><th scope="col">Fix</th><th scope="col">Severity</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">Q1</td><td class="mono">0:08.0</td><td>Match the can in shot 3 to the reference</td><td><span class="sev sev--critical"><i data-icon="warning-octagon"></i>Critical</span></td></tr>
+            <tr><td class="mono">Q2</td><td class="mono">0:14.8</td><td>Cut the health claim</td><td><span class="sev sev--critical"><i data-icon="warning-octagon"></i>Critical</span></td></tr>
+            <tr><td class="mono">Q3</td><td class="mono">0:00.0</td><td>Cut a 9:16 version for TikTok and Reels</td><td><span class="sev sev--major"><i data-icon="warning"></i>Major</span></td></tr>
+            <tr><td class="mono">Q4</td><td class="mono">0:14.8</td><td>Fix the garbled label lettering</td><td><span class="sev sev--major"><i data-icon="warning"></i>Major</span></td></tr>
+            <tr><td class="mono">Q5</td><td class="mono">0:00.0</td><td>Open on the lit can</td><td><span class="sev sev--major"><i data-icon="warning"></i>Major</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="share__side">
+        <div class="rewrite" id="rewrite">
+          <p class="rewrite__label"><span class="mono">0:14.8</span> Script suggestion</p>
+          <p class="rewrite__old"><span>Clinically proven focus.*</span></p>
+          <p class="rewrite__new">Made with real yuzu peel.</p>
+        </div>
+        <div class="link-card">
+          <h3><i data-icon="link-simple"></i> A link your client can read</h3>
+          <p>Read-only reports that expire after 1, 3, 7, 14 or 30 days. Clients see the score, findings and suggestions without an account, and never the video file. Export as HTML or JSON. Re-run after the edit; earlier runs stay in History.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LX 455 continued: who signs off -->
+  <section class="who" id="who" data-cue="4" data-phase="0.92" data-phase-dark="0.5" data-ink="dark" data-ink-dark="light" aria-labelledby="who-title">
+    <h2 class="section-title display" id="who-title">For whoever signs it off.</h2>
+    <div class="presets" role="tablist" aria-label="Who uses ShotFix">
+      <button role="tab" id="tab-creators" aria-controls="panel-creators" aria-selected="true" tabindex="0"><b class="mono">P1</b>Creators</button>
+      <button role="tab" id="tab-agencies" aria-controls="panel-agencies" aria-selected="false" tabindex="-1"><b class="mono">P2</b>Agencies and studios</button>
+      <button role="tab" id="tab-brand" aria-controls="panel-brand" aria-selected="false" tabindex="-1"><b class="mono">P3</b>Brand and compliance</button>
+    </div>
+    <div class="preset-panels">
+      <div class="preset" role="tabpanel" id="panel-creators" aria-labelledby="tab-creators">
+        <p class="preset__job">Decide if it's ready to post, and what to fix first.</p>
+        <ul><li>A verdict before you hit publish</li><li>Platform fit for every place you post</li><li>Fast for a quick read, Detailed when it counts</li></ul>
+        <img src="media/who-creators.jpg" alt="The report's verdict panel: needs work, 58 out of 100, with six category scores" loading="lazy" width="1280" height="800" />
+      </div>
+      <div class="preset" role="tabpanel" id="panel-agencies" aria-labelledby="tab-agencies" hidden>
+        <p class="preset__job">Review client and ad work, share reports, track fixes across re-runs.</p>
+        <ul><li>Links clients open without an account</li><li>Confirm or dismiss findings, with notes</li><li>Every run on a video kept in History</li></ul>
+        <img src="media/who-agencies.jpg" alt="The share dialog with a read-only link created for a client" loading="lazy" width="1280" height="800" />
+      </div>
+      <div class="preset" role="tabpanel" id="panel-brand" aria-labelledby="tab-brand" hidden>
+        <p class="preset__job">Check claims, disclaimers and platform rules before a campaign goes live.</p>
+        <ul><li>A claims register with risk levels</li><li>Industry rules for regulated categories</li><li>Every flag tied to the second it happens</li></ul>
+        <img src="media/who-brand.jpg" alt="A critical finding for an unsupported health claim, with its evidence frame" loading="lazy" width="1280" height="800" />
+      </div>
+    </div>
+  </section>
+
+  <!-- LX 455 continued: questions. The FAQPage JSON-LD is generated from this markup at build time -->
+  <section class="faq" id="faq" data-cue="4" data-phase="0.96" data-phase-dark="0.5" data-ink="dark" data-ink-dark="light" aria-labelledby="faq-title">
+    <div class="faq__head">
+      <h2 class="section-title display" id="faq-title">Questions, answered.</h2>
+      <p class="lede">What ShotFix checks, how it scores, and what you get back.</p>
+    </div>
+    <div class="faq__list">
+      <details class="faq__item" open>
+        <summary><span class="faq__n mono">01</span><span class="faq__q">What is ShotFix?</span><i data-icon="plus" class="faq__icon"></i></summary>
+        <div class="faq__a"><p>ShotFix is an AI video quality check, or video QC, that you run before you publish. You upload a video with its brief, and ShotFix watches and listens to the whole cut. It returns a score out of 100, a publish verdict, six category scores and a list of findings, each pinned to a time range in the video with the frame that shows it.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary><span class="faq__n mono">02</span><span class="faq__q">How does ShotFix score a video?</span><i data-icon="plus" class="faq__icon"></i></summary>
+        <div class="faq__a"><p>It scores six categories: consistency, visual quality, emotion and engagement, script and content, viral potential, and compliance. Each category has a weight and a confidence, and the weighted scores make the overall score. Under 50 is major rework, 50 to 69 needs work, 70 to 84 minor fixes, and 85 and up is ready. An open critical finding holds the verdict at needs work until it is fixed or dismissed.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary><span class="faq__n mono">03</span><span class="faq__q">What problems can it find in a video?</span><i data-icon="plus" class="faq__icon"></i></summary>
+        <div class="faq__a"><p>Continuity breaks, where a face, an outfit, a product's colour or a voice changes between shots. AI artefacts such as garbled lettering, warping and morphing. Unsupported claims and industry rules for regulated categories. Platform fit: shape, resolution and length for each place you post. Measured signals: black frames, freezes and loudness. And the hook, the timing of the call to action, and pacing.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary><span class="faq__n mono">04</span><span class="faq__q">Does ShotFix work on AI-generated video?</span><i data-icon="plus" class="faq__icon"></i></summary>
+        <div class="faq__a"><p>Yes. It checks for the problems generated footage tends to have: a character or product that drifts between shots, text that renders as gibberish, and shapes that warp or morph. Your reference notes count as ground truth, so if the brief says the can is coral, every shot is checked for coral.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary><span class="faq__n mono">05</span><span class="faq__q">What is the difference between Fast and Detailed analysis?</span><i data-icon="plus" class="faq__icon"></i></summary>
+        <div class="faq__a"><p>Fast is a quick review: about three AI checks run in parallel and return scores and findings, for 1 credit per started video minute. Detailed runs the full pipeline and adds fixes and suggestions to review, for 3 credits per started video minute. You pick the mode for each analysis.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary><span class="faq__n mono">06</span><span class="faq__q">Which platforms does it check a video for?</span><i data-icon="plus" class="faq__icon"></i></summary>
+        <div class="faq__a"><p>The platforms you list in the brief. For each one, ShotFix checks the shape, resolution and length of the video, for example whether TikTok and Instagram Reels get a 9:16 cut and YouTube gets 16:9.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary><span class="faq__n mono">07</span><span class="faq__q">Can I share a report with a client?</span><i data-icon="plus" class="faq__icon"></i></summary>
+        <div class="faq__a"><p>Yes. A report can be shared as a read-only link that expires after 1, 3, 7, 14 or 30 days. Clients see the score, findings and suggestions without an account, and never the video file. Reports also export as HTML or JSON.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary><span class="faq__n mono">08</span><span class="faq__q">What happens after I fix the video?</span><i data-icon="plus" class="faq__icon"></i></summary>
+        <div class="faq__a"><p>Run the analysis again. Earlier runs stay in History, so you can compare them. In the report you can confirm, dismiss or reopen findings and add notes, and approve, reject or mark suggestions as applied.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary><span class="faq__n mono">09</span><span class="faq__q">Who is ShotFix for?</span><i data-icon="plus" class="faq__icon"></i></summary>
+        <div class="faq__a"><p>AI video creators deciding whether a video is ready to post on YouTube, TikTok or Reels. Agencies and studios reviewing client and ad work and sharing reports with clients. Brand and compliance reviewers checking claims, disclaimers and platform rules before a campaign goes live.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary><span class="faq__n mono">10</span><span class="faq__q">How do I get access to ShotFix?</span><i data-icon="plus" class="faq__icon"></i></summary>
+        <div class="faq__a"><p>ShotFix is open to a small group of teams while it is tested. Request access with your work email and tell us what you make. Analyses are paid in credits per started video minute.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- LX 512: white day -->
+  <section class="close" id="access" data-cue="5" data-phase="1" data-phase-dark="0.52" data-ink="dark" data-ink-dark="light" aria-labelledby="access-title">
+    <div class="close__stage">
+      <div class="sunrise" aria-hidden="true"><span></span></div>
+      <h2 class="close__title display" id="access-title"><span class="line">Ready</span> <span class="line">to air.</span></h2>
+    </div>
+    <div class="close__body">
+      <p class="lede">ShotFix is open to a small group of teams while we test. Tell us what you make and we'll be in touch.</p>
+      <form class="access" id="accessForm" novalidate>
+        <div class="field">
+          <label for="email">Work email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@studio.com" />
+        </div>
+        <div class="field">
+          <label for="role">What do you make?</label>
+          <select id="role" name="role">
+            <option>AI videos for my own channels</option>
+            <option>Client and ad work at an agency or studio</option>
+            <option>Brand or compliance review</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <button class="btn btn--key" type="submit">Request access <i data-icon="arrow-right"></i></button>
+        <p class="access__status" id="accessStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot" data-ink="dark" data-ink-dark="light">
+  <p class="foot__brand"><span class="wordmark">ShotFix</span> by Metabrix <small class="mono">&copy; 2026</small></p>
+  <p class="foot__note">The ad, brand, people and report shown on this page are synthetic samples made for this demo.</p>
+  <ul class="foot__links"><li><a href="#faq">FAQ</a></li><li><a href="#top">Back to top</a></li><li><a href="mailto:info@metabrixlab.com">Contact</a></li></ul>
+</footer>
+</body>
+</html>

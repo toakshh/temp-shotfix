@@ -1,0 +1,18 @@
+{
+  "name": "shotfix-landing-recording",
+  "private": true,
+  "type": "module",
+  "description": "Re-records the ShotFix walkthrough used on the landing page, against synthetic data",
+  "scripts": {
+    "ad": "node render-ad.mjs && node zoomstill.mjs",
+    "prep": "bash prep.sh",
+    "app": "cd ../../frontend && npx vite build --outDir ../landing/recording/app-dist --emptyOutDir",
+    "record": "node record.mjs",
+    "media": "bash make-media.sh",
+    "all": "npm run ad && npm run prep && npm run app && npm run record && npm run media"
+  },
+  "dependencies": {
+    "playwright-core": "1.55.1",
+    "sharp": "0.34.5"
+  }
+}
